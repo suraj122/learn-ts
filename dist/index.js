@@ -1,7 +1,13 @@
 "use strict";
-function processEvents() {
-    while (true) {
-    }
+class GoogleCalendar {
+  constructor(name) {
+    this.name = name;
+  }
+  addEvent() {
+    throw new Error("Method not implemented.");
+  }
+  removeEvent() {
+    throw new Error("Method not implemented.");
+  }
 }
-processEvents();
 //# sourceMappingURL=index.js.map
