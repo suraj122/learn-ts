@@ -1,27 +1,23 @@
-// abstract class Calendar {
-//   constructor(public name: string) {}
+interface Product {
+  name: string,
+  price: number
+}
 
-//   abstract addEvent(): void;
-//   abstract removeEvent(): void;
-// }
+interface Customer {
+  id: number,
+  type: string
+}
 
-// interface Calendar {
-//   name: string;
-//   addEvent(): void;
-//   removeEvent(): void;
-// }
+type Readonlyt<T> = {
+  readonly [K in keyof T]: T[K]
+}
 
-// interface CloudCalendar extends Calendar{
-//   sync(): void;
-// }
+let product: Readonlyt<Product> = {
+  name: "a",
+  price: 4
+}
 
-class GoogleCalendar  {
-  constructor(public name: string){};
-  addEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-  removeEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-
+let customer: Readonlyt<Customer> = {
+  id: 4,
+  type: "Premium"
 }
