@@ -1,23 +1,19 @@
-interface Product {
-  name: string,
-  price: number
+type WatchedParameter = {
+  methodName: string,
+  parameterIndex: number
 }
 
-interface Customer {
-  id: number,
-  type: string
+const watchedParameters: WatchedParameter[] = [];
+
+function Watch(target: any, methodName: string, parameterIndex: number) {
+  watchedParameters.push({methodName, parameterIndex})
 }
 
-type Readonlyt<T> = {
-  readonly [K in keyof T]: T[K]
+class Vehicle{
+  move(@Watch speed: number) {}
+}
+class Work{
+  working(@Watch speed: number) {}
 }
 
-let product: Readonlyt<Product> = {
-  name: "a",
-  price: 4
-}
-
-let customer: Readonlyt<Customer> = {
-  id: 4,
-  type: "Premium"
-}
+console.log(watchedParameters);
