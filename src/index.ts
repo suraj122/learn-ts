@@ -1,5 +1,5 @@
-import { Circle, Square } from "./shapes";
+import * as _ from 'lodash';
 
-let circle = new Circle(2);
-let square = new Square(2)
-console.log(circle.radius, square.side);
+let x = _.clone([1,2,4]);
+
+console.log(x);

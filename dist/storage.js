@@ -1,12 +1,18 @@
-export class Store {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Encryptor = exports.Compressor = exports.Format = exports.Store = void 0;
+class Store {
 }
-export var Format;
+exports.Store = Store;
+var Format;
 (function (Format) {
     Format[Format["raw"] = 0] = "raw";
     Format[Format["compressor"] = 1] = "compressor";
-})(Format || (Format = {}));
-export class Compressor {
+})(Format || (exports.Format = Format = {}));
+class Compressor {
 }
-export class Encryptor {
+exports.Compressor = Compressor;
+class Encryptor {
 }
+exports.Encryptor = Encryptor;
 //# sourceMappingURL=storage.js.map
